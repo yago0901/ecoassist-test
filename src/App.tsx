@@ -46,15 +46,40 @@ function App() {
           <div className="container-right">
             <div className="right-block">
               <h2 className="title2">CADASTRO</h2>
-              <form className="form">
+              <form
+                className="form"
+                action="https://api.staticforms.xyz/submit"
+                method="post"
+              >
+                <input
+                  type="hidden"
+                  name="accessKey"
+                  value="c20d570c-90e7-4204-94c9-5cf3d83e04ac"
+                />
+
                 <h3 className="title">Nome:</h3>
-                <input className="input" type="text" />
+                <input
+                  className="input"
+                  type="text"
+                  name="name"
+                  placeholder="Nome Completo"
+                />
                 <h3 className="title">Telefone:</h3>
-                <input className="input" type="text" />
+                <input
+                  className="input"
+                  type="text"
+                  name="phone"
+                  placeholder="(XX) XXXXX-XXXX"
+                />
                 <h3 className="title">E-mail:</h3>
-                <input className="input" type="email" />
+                <input
+                  className="input"
+                  type="text"
+                  name="email"
+                  placeholder="E-mail"
+                />
                 <h3 className="title">Descrição:</h3>
-                <textarea className="input-area"></textarea>
+                <textarea className="input-area" name="message"></textarea>
                 <div className="checkbox-area">
                   <input type="checkbox" id="meuCheckbox" name="meuCheckbox" />
                   <p>Receber notificações</p>
@@ -64,6 +89,11 @@ function App() {
                     Enviar
                   </button>
                 </div>
+                <input
+                  type="hidden"
+                  name="redirectTo"
+                  value="https://example.com/contact/success"
+                ></input>
               </form>
             </div>
           </div>
