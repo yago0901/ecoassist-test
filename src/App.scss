@@ -1,0 +1,194 @@
+#root {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
+.body {
+  box-sizing: border-box;
+  background-image: linear-gradient(270deg, #cc092f 40%, #b81570 90%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+
+  .body-container {
+    width: 80%;
+    height: 80%;
+    background-image: linear-gradient(270deg, #cc092f 40%, #b81570 90%);
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: row;
+
+    .container-left {
+      flex: 3;
+      background-color: linear-gradient(270deg, #cc092f 40%, #b81570 90%);
+      display: flex;
+      justify-content: center;
+
+      .left-block {
+        background-color: rgba(3, 3, 3, 0.3);
+        margin-top: 5%;
+        margin-bottom: 25%;
+        width: 85%;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        border: 4px solid transparent;
+        border-color: #217b64;
+
+        .block-imgs {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0px 23%;
+
+          .ecoassist-logo {
+            width: 200px;
+          }
+
+          .bradesco-logo {
+            width: 200px;
+          }
+        }
+        .block-texts {
+          width: 100%;
+          text-align: center;
+
+          .title {
+            color: white;
+            margin: 0px;
+          }
+
+          .description {
+            color: white;
+          }
+        }
+      }
+
+      .reciclavel-gif {
+        position: absolute;
+        width: 50px;
+        left: 950px;
+        bottom: 340px;
+      }
+
+      .ecoassist-planet {
+        position: absolute;
+        width: 600px;
+        left: 345px;
+        bottom: 238px;
+      }
+    }
+
+    .container-right {
+      flex: 2;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+
+      .right-block {
+        width: 80%;
+        height: 55%;
+        margin-top: 8%;
+        padding-top: 7%;
+
+        .title2 {
+          color: rgb(0, 0, 0);
+          margin: 5% 0px;
+        }
+
+        .form {
+          width: 100%;
+          height: 100%;
+
+          .title {
+            color: rgb(0, 0, 0);
+            margin-top: 2.5%;
+            margin-left: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+          }
+
+          .input {
+            width: 98%;
+            height: 7%;
+          }
+
+          .input-area {
+            width: 98%;
+            height: 15%;
+          }
+
+          .div-right-btn {
+            display: flex;
+            justify-content: center;
+            height: 23%;
+
+            .right-btn {
+              width: 80%;
+              height: 50%;
+              background: linear-gradient(270deg, #cc092f 40%, #b81570 90%);
+              color: white;
+              font-size: 28px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border: 0;
+              border-radius: 15px;
+              cursor: pointer;
+            }
+
+            .right-btn:hover {
+              animation-name: botao;
+              animation-duration: 0.5s;
+              animation-iteration-count: infinite;
+              animation-direction: alternate;
+              animation-timing-function: ease-in-out;
+            }
+          }
+
+          .checkbox-area {
+            display: flex;
+          }
+        }
+      }
+    }
+
+    .container-right::before {
+      content: "";
+      position: absolute;
+      left: 57.6%;
+      bottom: 90px;
+      width: 30px;
+      height: 10%;
+      background-color: #ffffff;
+      transform: skewX(-20deg);
+    }
+
+    .container-right::after {
+      content: "";
+      position: absolute;
+      right: 41.6%;
+      top: 90px;
+      width: 30px;
+      height: 7%;
+      background: #cc092f;
+      transform: skewX(-15deg);
+    }
+  }
+}
+
+@keyframes botao {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
